@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - E-Commerce Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header" style="position: relative; background-color: var(--primary-bg);">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">E.COMMERCE HUB</div>
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="cart.html">CART <span id="cart-count-nav">(0)</span></a></li>
+                    <!-- Updated cart count span -->
+                    <li><a href="signup.html" class="btn-primary">SIGN UP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="products-hero-section">
+        <div class="container">
+            <h1>Our Latest Innovations</h1>
+            <p>Explore a universe of cutting-edge technology and unique designs.</p>
+        </div>
+    </section>
+    <section class="product-listing">
+        <div class="container">
+            <h2>All Products</h2>
+            <!-- NEW: Category Filter Buttons -->
+            <div class="category-filters" id="category-filters">
+                <!-- Buttons will be dynamically loaded here by JavaScript -->
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            <div id="no-products-message"
+                style="text-align: center; color: var(--light-text); display: none; margin-top: 50px;"> No products
+                found in this category. </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">E.COMMERCE HUB</div>
+                <ul class="footer-links">
+                    <li><a href="#">CUSTOMER SERVICE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="#">LEGAL</a></li>
+                </ul>
+                <div class="payment-methods">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=Visa" alt="Visa">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=MC" alt="MasterCard">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=PayPal" alt="PayPal">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=AmEx" alt="American Express">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="products.js"></script>
+    <script src="home.js"></script> <!-- Include home.js for hamburger menu on all pages -->
+</body>
+
+</html>

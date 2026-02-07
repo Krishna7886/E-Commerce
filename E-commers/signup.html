@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - E-Commerce Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header" style="position: relative; background-color: var(--primary-bg);">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">E.COMMERCE HUB</div>
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="cart.html">CART</a></li>
+                    <li><a href="signup.html" class="btn-primary">SIGN UP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="signup-hero-section">
+        <div class="container">
+            <h1>Join Our Community</h1>
+            <p>Create an account to unlock exclusive offers and personalized experiences.</p>
+        </div>
+    </section>
+    <section class="signup-content">
+        <div class="container">
+            <div class="signup-card">
+                <h2>Create Your Account</h2>
+                <!-- Step 1: Email and Password Registration -->
+                <form id="signup-form-step1" class="signup-form active">
+                    <div class="form-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" name="username" required>
+                        <div class="error-message" id="username-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" name="email" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" name="password" required>
+                        <div class="error-message" id="password-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password</label>
+                        <input type="password" id="reg-confirm-password" name="confirm-password" required>
+                        <div class="error-message" id="confirm-password-error"></div>
+                    </div>
+                    <button type="submit" class="btn-primary">Register & Send OTP</button>
+                    <p class="form-footer">Already have an account? <a href="#">Login here</a></p>
+                </form>
+                <!-- Step 2: OTP Verification -->
+                <form id="signup-form-step2" class="signup-form">
+                    <p class="otp-message">An OTP has been sent to <strong id="otp-email-display">your email</strong>.
+                        Please enter it below.</p>
+                    <div class="form-group">
+                        <label for="otp-input">OTP Code</label>
+                        <input type="text" id="otp-input" name="otp" required maxlength="6" pattern="[0-9]{6}">
+                        <div class="error-message" id="otp-error"></div>
+                    </div>
+                    <button type="submit" class="btn-primary">Verify OTP</button>
+                    <p class="resend-otp-container">Didn't receive the OTP? <button type="button" class="btn-link"
+                            id="resend-otp-btn">Resend OTP</button> <span id="otp-timer"></span></p>
+                    <button type="button" class="btn-secondary back-to-reg">Back to Registration</button>
+                </form>
+                <!-- Success Message -->
+                <div id="signup-success" class="signup-form success-message-card">
+                    <img src="https://via.placeholder.com/80x80/00ff00/000000?text=✔" alt="Success Icon">
+                    <h2>Registration Successful!</h2>
+                    <p>Your account has been created. You can now <a href="#">log in</a>.</p>
+                    <a href="index.html" class="btn-primary">Go to Home</a>
+                </div>
+                <!-- Error Message (for general errors) -->
+                <div id="signup-general-error" class="signup-form error-message-card">
+                    <img src="https://via.placeholder.com/80x80/ff0000/000000?text=X" alt="Error Icon">
+                    <h2>Something Went Wrong</h2>
+                    <p id="general-error-text">Please try again. If the problem persists, contact support.</p>
+                    <button type="button" class="btn-primary back-to-reg">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">E.COMMERCE HUB</div>
+                <ul class="footer-links">
+                    <li><a href="#">CUSTOMER SERVICE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="#">LEGAL</a></li>
+                </ul>
+                <div class="payment-methods">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=Visa" alt="Visa">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=MC" alt="MasterCard">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=PayPal" alt="PayPal">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=AmEx" alt="American Express">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="signup.js"></script>
+    <script src="home.js"></script> <!-- For hamburger menu -->
+</body>
+
+</html>

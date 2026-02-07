@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - E-Commerce Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header" style="position: relative; background-color: var(--primary-bg);">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">E.COMMERCE HUB</div>
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="cart.html">CART <span id="cart-count-nav">(0)</span></a></li>
+                    <li><a href="signup.html" class="btn-primary">SIGN UP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="cart-hero-section">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+            <p>Review your selected items before checkout.</p>
+        </div>
+    </section>
+    <section class="cart-content">
+        <div class="container">
+            <div id="cart-items-container" class="cart-items-container">
+                <!-- Cart items will be rendered here by JavaScript -->
+                <p id="empty-cart-message" style="text-align: center; color: var(--light-text); display: none;"> Your
+                    cart is currently empty. <a href="products.html" style="color: var(--neon-cyan);">Start
+                        shopping!</a>
+                </p>
+            </div>
+            <div id="cart-summary" class="cart-summary" style="display: none;">
+                <h2>Cart Summary</h2>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping:</span>
+                    <span>$0.00 (Free)</span> <!-- Simple for now -->
+                </div>
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn-primary checkout-btn">Proceed to Checkout</button>
+                <button class="btn-secondary clear-cart-btn" id="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">E.COMMERCE HUB</div>
+                <ul class="footer-links">
+                    <li><a href="#">CUSTOMER SERVICE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="#">LEGAL</a></li>
+                </ul>
+                <div class="payment-methods">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=Visa" alt="Visa">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=MC" alt="MasterCard">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=PayPal" alt="PayPal">
+                    <img src="https://via.placeholder.com/40x25/ffffff/000000?text=AmEx" alt="American Express">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+    <script src="home.js"></script> <!-- For hamburger menu -->
+</body>
+
+</html>
